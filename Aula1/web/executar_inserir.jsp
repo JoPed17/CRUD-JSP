@@ -1,6 +1,6 @@
+<%@page import="DAO.DAOCliente"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="MODEL.Cliente"%>
-<%@page import="DAO.Cliente"%>
 
 <%
     
