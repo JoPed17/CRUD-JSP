@@ -7,18 +7,15 @@
         <title>Formulário</title>
     </head>
     <body>
-        <form method="post" action="#">
+             
+            <h1>ESCOLHA</h1>
+            
+            <a href="cadastro.jsp"><button>CADASTRAR</button></a>
+            <a href="atualizar.jsp"><button>ATUALIZAR CLIENTE</button></a>
+            <a href="excluir.jsp"><button>EXCLUIR CLIENTE</button></a>
+            
         
-            <h1>Cadastro cliente</h1>
-            
-            <label for="nome">NOME</label><br>
-            <input type="text" name="nome"/><br>
-            
-            <label for="email">EMAIL</label><br>
-            <input type="text" name="email"/><br>
-            
-            <input type="submit" value="ENVIAR"/>
         
-        </form>
+        
     </body>
 </html>

@@ -2,6 +2,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="MODEL.Cliente"%>
 
+
 <%
     
     Cliente cli = new Cliente();
@@ -21,6 +22,8 @@
             cld.inserirCliente(cli);
             response.sendRedirect("index.jsp");
         }
+    }catch (Exception erro){
+        throw new RuntimeException("Erro executar inserir: ", erro);
     }
 
 

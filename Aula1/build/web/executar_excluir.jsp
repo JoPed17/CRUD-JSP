@@ -1,12 +1,10 @@
-<%@page import="DAO.DAOCliente"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="DAO.DAOExcluir"%>
 <%@page import="MODEL.Cliente"%>
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
-    
     Cliente cli = new Cliente();
-    DAOCliente cld = new DAOCliente();
+    DAOExcluir cld = new DAOExcluir();
     
     try{
         //pega o valor do formulario no navegador
@@ -19,22 +17,12 @@
         }else{
             cli.setNome(nome);
             cli.setEmail(email);
-            cld.inserirCliente(cli);
+            cld.ExcluirCliente(cli);
             response.sendRedirect("index.jsp");
         }
     }catch (Exception erro){
-        throw new RuntimeException("Erro executar inserir: ", erro);
+        throw new RuntimeException("Erro  executar excluir : ", erro);
     }
-
-
-
-
-
-
-
-
-
-
 
 
 %>
