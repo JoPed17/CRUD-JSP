@@ -31,4 +31,57 @@ public class DAOCliente {
             throw new RuntimeException ("Erro Inserir Cliente :", erro);
         }
     }
+    
+    public void deletarCliente(int cod) throws Exception{
+        open();
+            stmt = conn.prepareStatement("delete from cliente where idCliente = ?");
+            stmt.setInt(1, cod);
+            stmt.execute();
+            stmt.close();
+        close();    
+    }
+    
+    public void update(Cliente c) throws Exception{
+        open();
+            stmt = conn.prepareStatement("update cliente set nome = ? , email = ? where idCliente = ?");
+            stmt.setString(1, c.getNome());
+            stmt.setString(2, c.getEmail());
+            stmt.execute();
+            stmt.close();
+        close();   
+    }
+    
+    public List findAll() throws Exception{
+        open();
+            stmt = conn.prepareStatement("select * from cliente");
+            rs = stmt.execute Query();
+                List lista = new ArrayList();
+            while(rs.next()){
+                Cliente cliente = new Cliente();
+                cliente.setidCliente(rs.getInt(1));
+                cliente.setNome(rs.getString(2));
+                cliente.setEmail(rs.getString(3));
+                lista.add(cliente);
+            }    
+            stmt.close();
+         close();
+         return lista;
+    }
+    
+     public Cliente findByCode(int cod) throws Exception{
+         open();
+            stmt = conn.prepareStatement("select * from Cliente where idCliente = ?");
+            stmt.setInt(1, cod);
+            rs = stmt.executeQuery();
+                Cliente cliente = null;
+            if(rs.next()){
+                cliente = new Cliente();
+                cliente.setIdCliente(rs.getInt(1));
+                cliente.setNome(rs.getString(2));
+                cliente.setEmail(rs.getString(3));
+            }    
+            stmt.close();
+         close();
+         return cliente;
+     }
 }
