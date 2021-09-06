@@ -17,6 +17,8 @@
             
             <input type="submit" value="CADASTRAR"/>
             
+            <a href="index.jsp"><button>INÍCIO</button></a>
+            
             
             
         </form>    

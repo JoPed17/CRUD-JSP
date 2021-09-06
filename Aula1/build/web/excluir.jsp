@@ -17,5 +17,7 @@
             <input type="email" placeholder="Insira o email"/>
             
             <input type="submit" value="EXCLUIR"/>
+            
+            <a href="index.jsp"><button>INÍCIO</button></a>
     </body>
 </html>

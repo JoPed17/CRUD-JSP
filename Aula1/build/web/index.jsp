@@ -4,15 +4,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="inicio.css">
         <title>Formulário</title>
     </head>
     <body>
              
             <h1>ESCOLHA</h1>
             
-            <a href="cadastro.jsp"><button>CADASTRAR</button></a>
-            <a href="atualizar.jsp"><button>ATUALIZAR CLIENTE</button></a>
-            <a href="excluir.jsp"><button>EXCLUIR CLIENTE</button></a>
+            <div class="content">
+            <a href="cadastro.jsp" class="button1">CADASTRO</a><br>
+            <a href="atualizar.jsp"class="button2">ATUALIZAR CLIENTE</button></a><br>
+            <a href="excluir.jsp" class="button3">EXCLUIR CLIENTE</button></a><br>
+            
             
         
         
